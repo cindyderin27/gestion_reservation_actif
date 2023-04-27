@@ -33,6 +33,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custum.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
@@ -49,7 +50,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
+        <span class="d-none d-lg-block">Booking asset</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -290,9 +291,21 @@
         </ul>
       </li><!-- End Charts Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="Liste_demande.html">
           <i class="bi bi-clock-fill"></i>
           <span>Historique de reservation</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Liste-materiaux.html">
+          <i class="bi bi-clock-fill"></i>
+          <span>Liste des actifs</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ajouter-materiel.html">
+          <i class="bi bi-clock-fill"></i>
+          <span>Ajouter actif</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
@@ -322,62 +335,94 @@
 
                 <div class="card-body">
                   <h5 class="card-title d-flex flex-column align-items-center mb-5 " >
-                    <img src="assets/img/logo.png" alt="" class="mb-4">
+                    <img src="assets/img/logo.png" class="logo-content" alt="" class="mb-4">
                     <strong>AJOUTER UN ACTIF</strong>
                   </h5>
                   <!-- Floating Labels Form -->
                   <form class="row g-3">
                     <div class="row mb-3">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label">Numéro Actif</label>
+                      <label for="inputEmail3" class="col-sm-2 col-form-label d-block">Numéro Actif</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputText">
+                        <input type="text" class="form-control" id="numero">
                       </div>
                     </div>
                     <div class="row mb-3">
-                      <label for="inputEmail3" class="col-sm-2 col-form-label">Nom</label>
+                      <label for="inputEmail3" class="col-sm-2 col-form-label" >Nom</label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputText">
+                        <input type="text" class="form-control" id="libelle">
                       </div>
                       <div class="row mb-3">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">Categorie</label>
                         <div class="col-sm-10">
-                          <select type="text" class="form-control" id="inputText">
+                          <select type="text" class="form-control" id="categorie">
                           
-                            <option value="Video projecteur"> Video projecteur </option>
-                            <option value="Video projecteur"> laboratoire </option>
+                            <option value="1"> Video projecteur </option>
+                            <option value="2"> laboratoire </option>
                           
                           </select>
                         </div>
                     </div>
+
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label">Etat</label>
+                      <div class="col-sm-10">
+                        <select type="text" class="form-control" id="etat">
+                        
+                          <option value="1">Bon</option>
+                          <option value="2"> endomagé </option>
+                          <option value="2"> pannes negligeables </option>
+                          <option value="2"> en panne </option>
+                        
+                        </select>
+                      </div>
+                  </div>
+
                     <div class="col-md-12">
                       <div class="row mb-3">
                         <label for="inputPassword" class="col-sm-2 col-form-label">Description</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control"></textarea>
+                          <textarea class="form-control" id="description"></textarea>
                         </div>
                       </div>
                    </div>
                    <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Stock</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputText">
+                      <input type="text" class="form-control" id="quantite">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Est il disponible</label>
+                    <div class="col-sm-10">
+                      <select type="text" class="form-con trol" id="disponible">
+                          
+                        <option value="1" selected>Oui</option>
+                        <option value="0">non</option>
+                      
+                      </select>
                     </div>
                   </div>
                   <div class="row mb-3">
                     <label for="inputDate" class="col-sm-2 col-form-label">Date D'achat</label>
                     <div class="col-sm-10">
-                      <input type="date" class="form-control">
+                      <input type="date" class="form-control" id="dateachat">
                     </div>
                   </div>
                     <div class="row mb-3">
                       <label for="inputEmail3" class="col-sm-2 col-form-label">Garantie</label>
                       <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputText">
+                        <input type="number" class="form-control" id="garantie">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label">Prix d'achat</label>
+                      <div class="col-sm-10">
+                        <input type="number" class="form-control" id="prix">
                       </div>
                     </div>
                     <div class="text-center">
                       <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Ajouter</button>
+                        <button class="btn btn-primary" type="button" id="ajout-actif">Ajouter</button>
                       </div>
                     </div>
                   </form><!-- End floating Labels Form -->
@@ -408,6 +453,11 @@
       <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
       <script src="assets/vendor/tinymce/tinymce.min.js"></script>
       <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- jQuery Library -->
+  
+<script src="assets/js/jquery.livequery.js"></script>
+
 
       <!-- Template Main JS File -->
       <script src="assets/test/my-news.js"></script>
