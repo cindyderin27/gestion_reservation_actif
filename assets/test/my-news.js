@@ -570,3 +570,42 @@ $('#confirm-demande').livequery('click', function(e){
 
   return false;
 });
+
+
+
+// RUBRIQUE EVENNEMENTS SUR LES BOUTONS 
+$('#confirm-demande1').livequery('click', function(e){
+
+  e.preventDefault() ; 
+
+
+    var data2  = {
+      numero: numero, 
+      libelle: libelle, 
+      categorie: categorie ,
+      description : description ,
+      quantite : quantite ,
+      dateachat : dateachat ,
+      garantie : garantie ,
+      prix : prix ,
+       etat : etat ,
+       disponible : disponible 
+
+    };
+
+    // methode 1
+// creer un materiel
+    $.get(url+"/demande/all/csv",  function(puerto){
+
+
+   }, 'json');
+
+   
+ 
+
+  return false;
+});
+
+
+
+
