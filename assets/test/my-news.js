@@ -490,9 +490,10 @@ function validerdemande (id) {
   // methode 1
 // creer un materiel
   $.post(url +"/demande/validate", data , function(puerto){
-
- console.log(puerto) ;
- console.log(" demande valide ") ;
+    
+    location.reload(true);
+ //console.log(puerto) ;
+ //console.log(" demande valide ") ;
  }, 'json');
 }
 
@@ -506,7 +507,7 @@ function confirmerdemande (id) {
   // methode 1
 // creer un materiel
   $.post(url +"/demande/confirm", data , function(puerto){
-
+    location.reload(true); 
   //console.log(puerto) ;
 //  console.log(" produit ajoute avec succes ") ;
  }, 'json');
@@ -523,7 +524,7 @@ function rejeterdemande (id) {
   // methode 1
 // creer un materiel
   $.post(url +"/demande/rejeter", data , function(puerto){
-
+    location.reload(true);
   //console.log(puerto) ;
 //  console.log(" produit ajoute avec succes ") ;
  }, 'json');
